@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "PHbot Pro",
+  "version": "3.0.0",
+  "description": "Bot de automação avançado para Bestiary Arena.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://bestiaryarena.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://bestiaryarena.com/*"],
+      "js": ["content_script.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "PHbot Pro",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
